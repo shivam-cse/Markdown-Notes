@@ -6,18 +6,29 @@
 
 
 ## Running the app on a local machine
-Clone this repo:
-$ git clone git@github.com:shivam-cse/Markdown-Notes.git
-Open the folder:
-
-$ cd Markdown-Notes
-Install all dependancies:
-
-$ npm install
-Start the app (you can run backend and frontend part simultaneously by below cmd):
-
-$ npm run both 
-The app will be automatically in your browser at http://localhost:3000/.
+<ul>
+  <li>Clone this repo:
+    <ul>
+      <li>$ git clone git@github.com:shivam-cse/Markdown-Notes.git</li>
+   </ul>
+  </li>
+ <li>Open the folder:
+    <ul>
+      <li>$ cd Markdown-Notes</li>
+   </ul>
+  </li>
+  <li>Install all dependancies:
+    <ul>
+      <li>$ npm install</li>
+   </ul>
+  </li>
+  <li>Start the app (you can run backend and frontend part simultaneously by below cmd):
+    <ul>
+      <li>$ npm run both <li>
+      <li>The app will be automatically in your browser at http://localhost:3000/. <br/></li>
+   </ul>
+  </li>
+</ul>
 
 
 
