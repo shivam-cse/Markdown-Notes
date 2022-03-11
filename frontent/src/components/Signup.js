@@ -22,7 +22,7 @@ export default function Signup() {
 
     if(json.success){
       // save the token and redirect
-      localStorage.setItem('token', json.authtoken);
+      localStorage.setItem('token', json.authToken);
       navigate('/')
   }
   else{

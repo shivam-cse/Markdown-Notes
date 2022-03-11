@@ -10,7 +10,7 @@ export default function Login() {
         e.preventDefault();
         //API call
         const response = await fetch(`${host}/api/auth/login`, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -22,18 +22,13 @@ export default function Login() {
 
         if(json.success){
             // save the token and redirect
-            localStorage.setItem('token', json.authtoken);
+            localStorage.setItem('token', json.authToken);
             navigate('/')
-
-
         }
         else{
 
             alert("Valid credentails - please enter with correct email and password")
         }
-
-        
-
     }
     const onChange = (e) => {
         // console.log("onchange", credentials);

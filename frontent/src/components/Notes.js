@@ -2,11 +2,20 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import notesContext from '../context/Notes/noteContext'
 import Addnotes from './Addnotes';
 import Noteitems from './Noteitems';
+import { useNavigate } from 'react-router-dom';
 export default function Notes() {
+  const navigate = useNavigate();
   const context = useContext(notesContext)
   const { notes, getNote, editNote} = context
   useEffect(() => {
-    getNote();
+    if(localStorage.getItem('token') !== null)
+       {
+         getNote();
+       }
+    else
+       {
+        navigate('/login')
+       }
   }, []);
 
   const [note, setnote] = useState({id:"", etitle: "", edescription: "", etag: "" });
@@ -72,6 +81,7 @@ export default function Notes() {
       <div className='container'>
         <h3>{notes.length == 0 && "No notes added"}</h3>
       </div>
+
       {notes.map((note) => {
         return <Noteitems key={note._id} updateNote={updateNote} note={note} />;
       })}
